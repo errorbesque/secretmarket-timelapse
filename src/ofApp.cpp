@@ -2,18 +2,21 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    ofSetWindowShape(640*2,480);
-    
-    gui.setup();
-    gui.add(framerate.setup("framerate",10,1,120));
-    gui.add(previewRate.setup("previewrate",10,1,100));
-    gui.add(maxFrames.setup("maxframes",50,50,100));
+    ofSetWindowShape(camW*2,camH);
+    saveButton.addListener(this, &ofApp::saveButtonPressed);
 
-    cam.setup(640,480);
+    gui.setup();
+    gui.add(framerate.setup("period of frame capture (s)",10,1,400));
+    gui.add(previewRate.setup("framerate of preview (f)",10,1,100));
+    gui.add(maxFrames.setup("max frames in loop (#)",50,50,100));
+    gui.add(saveButton.setup("save current timelapse to disk"));
+
+    cam.setup(camW,camH);
     cam.update(); // otherwise this will be a blank frame
     image.setFromPixels(cam.getPixels());
     images.push_back(image);
     lastFrameTime = ofGetElapsedTimef();
+    
 }
 
 //--------------------------------------------------------------
@@ -40,11 +43,23 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    image.draw(0,0,640,480);
-    images[floor(currentTLFrame)].draw(640,0,640,480);
-    ofDrawBitmapString("# frames = " + ofToString(images.size()),640+10,10);
+    image.draw(0,0,camW,camH); // show live cam input
+    images[floor(currentTLFrame)].draw(camW,0,camW,camH); // show timelapsed
+    ofDrawBitmapString("# frames = " + ofToString(images.size()),camW+10,10);
+    ofDrawBitmapString("current frame " + ofToString(currentTLFrame),camW+10,20);
     gui.draw();
     
+}
+
+//--------------------------------------------------------------
+void ofApp::saveButtonPressed(){
+    // save current timelapse array to disk as a gif
+    gifEncoder.setup(camW,camH, .25, 256);
+    for (int i=0; i<images.size(); i++){
+        gifEncoder.addFrame(images[i], 0.25);
+    }
+    gifEncoder.save("tloutput_" + ofToString(lastFrameTime) + ".gif");
+    gifEncoder.reset();
 }
 
 //--------------------------------------------------------------

@@ -456,6 +456,86 @@
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
+			<key>7C82ED6ED521A4BE19F09B39</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxGifEncoder.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxGifEncoder/src/ofxGifEncoder.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>A068255A4217EABB9A7301D7</key>
+			<dict>
+				<key>fileRef</key>
+				<string>B072B1E5BDB34AF9421D936E</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>B072B1E5BDB34AF9421D936E</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxGifEncoder.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGifEncoder/src/ofxGifEncoder.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>FDFA5FF76B4D99842EE7B6F5</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>186BEB137787E0F960C39A3D</string>
+					<string>B072B1E5BDB34AF9421D936E</string>
+					<string>7C82ED6ED521A4BE19F09B39</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>src</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>9B798131E8584BCD510B255B</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>FDFA5FF76B4D99842EE7B6F5</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofxGifEncoder</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>186BEB137787E0F960C39A3D</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxGifDitherTypes.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxGifEncoder/src/ofxGifDitherTypes.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
 			<key>6948EE371B920CB800B5AC1A</key>
 			<dict>
 				<key>children</key>
@@ -627,6 +707,7 @@ fi
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
 						<string>src</string>
+						<string>../../../addons/ofxGifEncoder/src</string>
 						<string>../../../addons/ofxGui/src</string>
 					</array>
 					<key>MACOSX_DEPLOYMENT_TARGET</key>
@@ -671,6 +752,7 @@ fi
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
 						<string>src</string>
+						<string>../../../addons/ofxGifEncoder/src</string>
 						<string>../../../addons/ofxGui/src</string>
 					</array>
 					<key>ICON</key>
@@ -707,6 +789,7 @@ fi
 			<dict>
 				<key>children</key>
 				<array>
+					<string>9B798131E8584BCD510B255B</string>
 					<string>480A780D8D0308AE4A368801</string>
 				</array>
 				<key>isa</key>
@@ -3474,6 +3557,7 @@ fi
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
 						<string>src</string>
+						<string>../../../addons/ofxGifEncoder/src</string>
 						<string>../../../addons/ofxGui/src</string>
 					</array>
 					<key>MACOSX_DEPLOYMENT_TARGET</key>
@@ -3538,6 +3622,7 @@ fi
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
 						<string>src</string>
+						<string>../../../addons/ofxGifEncoder/src</string>
 						<string>../../../addons/ofxGui/src</string>
 					</array>
 					<key>MACOSX_DEPLOYMENT_TARGET</key>
@@ -3565,6 +3650,7 @@ fi
 				<array>
 					<string>E4B69E200A3A1BDC003C02F2</string>
 					<string>E4B69E210A3A1BDC003C02F2</string>
+					<string>A068255A4217EABB9A7301D7</string>
 					<string>856AA354D08AB4B323081444</string>
 					<string>5CBB2AB3A60F65431D7B555D</string>
 					<string>853E0BA2F448076739446874</string>
@@ -3675,6 +3761,7 @@ fi
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
 						<string>src</string>
+						<string>../../../addons/ofxGifEncoder/src</string>
 						<string>../../../addons/ofxGui/src</string>
 					</array>
 					<key>ICON</key>
@@ -3728,6 +3815,7 @@ fi
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
 						<string>src</string>
+						<string>../../../addons/ofxGifEncoder/src</string>
 						<string>../../../addons/ofxGui/src</string>
 					</array>
 					<key>ICON</key>

@@ -4,17 +4,24 @@
 #include "ofVideoGrabber.h"
 #include "ofImage.h"
 #include "ofxGui.h"
+#include "ofxGifEncoder.h"
 
 class ofApp : public ofBaseApp{
 
 	public:
     ofVideoGrabber cam;
     ofImage image;
-    ofxFloatSlider framerate;
+    ofxIntSlider framerate;
     ofxFloatSlider previewRate;
     ofxIntSlider maxFrames;
 
     ofxPanel gui;
+    ofxButton saveButton;
+    ofxGifEncoder gifEncoder; // for saving gifs
+    
+    int camW=1280;
+    int camH=720;
+    
     vector<ofImage> images;
     
     
@@ -33,7 +40,9 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-	
+        void saveButtonPressed();
+        
+    
     private:
     float lastFrameTime;
     float currentTLFrame = 0;

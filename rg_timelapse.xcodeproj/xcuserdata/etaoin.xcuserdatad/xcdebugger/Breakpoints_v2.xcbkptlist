@@ -1,38 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   uuid = "5364C702-9D24-4D85-9F71-47DEBA8268BF"
+   uuid = "C05A4BA0-77A3-4167-ADE8-B0B093BD0F0F"
    type = "1"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2ED75FB7-3385-4050-907A-80D2A46C39EE"
-            shouldBeEnabled = "No"
+            uuid = "2BBCE324-CF32-4FD6-B271-73E50CE02F33"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "src/ofApp.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "ofApp::draw()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5C06B34D-E504-41B3-946F-38A9E7510DBC"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "src/ofApp.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "ofApp::draw()"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "ofApp::saveButtonPressed()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
